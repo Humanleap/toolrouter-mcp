@@ -1,0 +1,58 @@
+{
+  "name": "toolrouter-mcp",
+  "version": "0.2.9",
+  "description": "MCP server + CLI for ToolRouter — discover, search, and call AI tools from any agent or terminal",
+  "type": "module",
+  "bin": {
+    "toolrouter-mcp": "dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --target node22 --clean --shims",
+    "dev": "tsup src/index.ts --format esm --target node22 --watch"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "tsup": "^8.4.0",
+    "typescript": "^6.0.3"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "mcp-gateway",
+    "mcp-client",
+    "model-context-protocol",
+    "modelcontextprotocol",
+    "toolrouter",
+    "ai-tools",
+    "ai-agent",
+    "tool-aggregator",
+    "cli",
+    "claude",
+    "claude-desktop",
+    "chatgpt",
+    "copilot",
+    "codex",
+    "cursor",
+    "windsurf",
+    "cline",
+    "gemini",
+    "openclaw"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Humanleap/toolrouter-mcp.git"
+  },
+  "homepage": "https://toolrouter.com",
+  "license": "MIT"
+}

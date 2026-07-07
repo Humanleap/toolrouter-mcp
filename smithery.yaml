@@ -1,0 +1,18 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required:
+      - apiKey
+    properties:
+      apiKey:
+        type: string
+        description: Your ToolRouter API key. Get one at toolrouter.com — auto-provisioned on first use.
+  commandFunction: |-
+    (config) => ({
+      command: 'npx',
+      args: ['-y', 'toolrouter-mcp'],
+      env: { TOOLROUTER_API_KEY: config.apiKey }
+    })
+  exampleConfig:
+    apiKey: tr_live_your_key_here
