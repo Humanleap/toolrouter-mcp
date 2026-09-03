@@ -1,39 +1,27 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.humanleap/toolrouter-mcp",
-  "description": "One connection = 226 tools and 1,208 skills for Claude, ChatGPT, Cursor, and any MCP client.",
-  "version": "0.2.8",
-  "packages": [
+  "name": "io.github.Humanleap/toolrouter",
+  "title": "ToolRouter",
+  "description": "250+ specialist AI tools through one MCP connection. Free tools work before account claim.",
+  "version": "0.3.0",
+  "websiteUrl": "https://toolrouter.com",
+  "repository": {
+    "url": "https://github.com/Humanleap/toolrouter-mcp",
+    "source": "github"
+  },
+  "icons": [
     {
-      "registryType": "npm",
-      "registryBaseUrl": "https://registry.npmjs.org",
-      "identifier": "toolrouter-mcp",
-      "version": "0.2.8",
-      "transport": {
-        "type": "stdio"
-      },
-      "environmentVariables": [
-        {
-          "name": "TOOLROUTER_API_KEY",
-          "description": "Your ToolRouter API key. Optional — the server auto-provisions one on first use.",
-          "isRequired": false,
-          "isSecret": true
-        }
+      "src": "https://toolrouter.com/icon-256.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "256x256"
       ]
     }
   ],
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://api.toolrouter.com/mcp",
-      "headers": [
-        {
-          "name": "Authorization",
-          "description": "Bearer <your ToolRouter API key>",
-          "isRequired": true,
-          "isSecret": true
-        }
-      ]
+      "url": "https://api.toolrouter.com/mcp"
     }
   ]
 }

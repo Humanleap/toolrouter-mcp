@@ -1,0 +1,10 @@
+{
+  "name": "toolrouter",
+  "version": "0.3.0",
+  "description": "250+ specialist AI tools through one MCP connection. Free tools work before account claim.",
+  "mcpServers": {
+    "toolrouter": {
+      "httpUrl": "https://api.toolrouter.com/mcp"
+    }
+  }
+}
