@@ -329,3 +329,13 @@ npx -y toolrouter-mcp call humanleap/web-search search --input '{"query":"MCP to
 - [Browse Tools](https://toolrouter.com/tools)
 - [Documentation](https://toolrouter.com/docs)
 - [REST API](https://api.toolrouter.com/v1/tools)
+- [Privacy Policy](https://toolrouter.com/privacy)
+- [Terms](https://toolrouter.com/terms)
+
+## Privacy Policy
+
+https://toolrouter.com/privacy
+
+## Support
+
+support@toolrouter.com

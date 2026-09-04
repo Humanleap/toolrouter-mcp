@@ -1,0 +1,9 @@
+{
+  "name": "toolrouter",
+  "description": "The OpenRouter for tools. One MCP connection gives Claude Code a hosted catalog of specialist tools: web search, scraping and screenshots, research, SEO, finance, property, compliance, transcription, charts and diagrams. Free tools work immediately; paid tools are pay per call from $0.005.",
+  "version": "0.3.1",
+  "author": { "name": "Humanleap", "url": "https://toolrouter.com" },
+  "homepage": "https://toolrouter.com",
+  "repository": "https://github.com/Humanleap/toolrouter-mcp",
+  "license": "MIT"
+}
