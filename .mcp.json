@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "toolrouter": {
+      "type": "http",
+      "url": "https://api.toolrouter.com/mcp/anthropic"
+    }
+  }
+}
