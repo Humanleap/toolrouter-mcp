@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.Humanleap/toolrouter",
   "title": "ToolRouter",
-  "description": "250+ specialist AI tools through one MCP connection. Free tools work before account claim.",
-  "version": "0.3.0",
+  "description": "The OpenRouter for tools. One MCP connection gives any AI agent 250+ hosted tools, pay per call.",
+  "version": "0.3.1",
   "websiteUrl": "https://toolrouter.com",
   "repository": {
     "url": "https://github.com/Humanleap/toolrouter-mcp",

@@ -1,13 +1,87 @@
-# toolrouter-mcp
+# ToolRouter — the OpenRouter for tools
 
-MCP server + CLI for [ToolRouter](https://toolrouter.com). One package, every tool — discover, search, and call AI tools from any agent or terminal.
+**The OpenRouter for tools. One MCP connection gives any AI agent 250+ hosted tools, pay per call.**
 
-ToolRouter gives your AI agent **one connection to 226 tools and 1,208 skills** — web search, image and video generation, SEO and GEO, web scraping, lead finding, competitor research, document analysis, security scanning, and much more — across Claude, ChatGPT, Cursor, Windsurf, Codex, Gemini CLI, VS Code, Cline, and OpenClaw. Everything runs on the hosted gateway; nothing executes locally.
+ToolRouter is the OpenRouter for tools. Connect once over MCP and your agent can discover and call 250+ hosted specialist tools: web search, scraping, image and video generation, SEO, finance, property, compliance and more. Free tools work immediately; paid tools are pay per call. Everything runs on the hosted gateway; nothing executes locally.
+
+**The compact routing surface costs an agent about 9,000 tokens of context for the whole catalog, versus roughly 257,000 tokens if every skill were loaded as its own tool** (measured 2026-09-03; method and raw data at <https://toolrouter.com/blog/mcp-tool-schema-token-cost>).
+
+## Connect in one line
+
+Hosted endpoint: `https://api.toolrouter.com/mcp` (streamable HTTP). No API key needed — the server provisions a free account on first connect and returns a claim link.
+
+### Claude Code
 
 ```bash
-# Claude Code — one line, no API key needed (auto-provisions on first use)
-claude mcp add toolrouter -- npx -y toolrouter-mcp
+claude mcp add --transport http toolrouter https://api.toolrouter.com/mcp
 ```
+
+### Claude (chat, Desktop, mobile)
+
+Customize → Connectors → Add custom connector, name it `ToolRouter`, URL `https://api.toolrouter.com/mcp/anthropic`.
+
+### Cursor
+
+Add to `.cursor/mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "toolrouter": {
+      "url": "https://api.toolrouter.com/mcp"
+    }
+  }
+}
+```
+
+### VS Code
+
+Add to `.vscode/mcp.json`:
+
+```json
+{
+  "servers": {
+    "toolrouter": {
+      "type": "http",
+      "url": "https://api.toolrouter.com/mcp"
+    }
+  }
+}
+```
+
+### Gemini CLI
+
+Add to `~/.gemini/settings.json`:
+
+```json
+{
+  "mcpServers": {
+    "toolrouter": {
+      "httpUrl": "https://api.toolrouter.com/mcp"
+    }
+  }
+}
+```
+
+### Windsurf
+
+Add to `~/.codeium/windsurf/mcp_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "toolrouter": {
+      "serverUrl": "https://api.toolrouter.com/mcp"
+    }
+  }
+}
+```
+
+Any other MCP client that speaks streamable HTTP can use the same URL.
+
+## Local bridge (npm)
+
+`toolrouter-mcp` is a stdio bridge to the same hosted gateway, plus a CLI. Use it where a client cannot take a remote URL.
 
 ## Three ways to use it
 
@@ -39,13 +113,7 @@ curl -H "Authorization: Bearer $TOOLROUTER_API_KEY" \
   https://api.toolrouter.com/v1/tools/call
 ```
 
-## Install as MCP Server
-
-### Claude Code
-
-```bash
-claude mcp add toolrouter -- npx -y toolrouter-mcp
-```
+## Install the local bridge
 
 ### Codex CLI
 

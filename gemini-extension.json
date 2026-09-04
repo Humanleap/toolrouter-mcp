@@ -1,7 +1,7 @@
 {
   "name": "toolrouter",
-  "version": "0.3.0",
-  "description": "250+ specialist AI tools through one MCP connection. Free tools work before account claim.",
+  "version": "0.3.1",
+  "description": "The OpenRouter for tools. One MCP connection gives any AI agent 250+ hosted tools, pay per call.",
   "mcpServers": {
     "toolrouter": {
       "httpUrl": "https://api.toolrouter.com/mcp"
